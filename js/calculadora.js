@@ -65,8 +65,14 @@ function ceroo() {
 
 function rei() {
     resultado.value = " ";
+    opeA = 0;
+    opeB = 0;
+    ope = "";
 }
 
+function lim() {
+    resultado.value = " ";
+}
 function code() {
     resultado.value = "1620079566";
 }
@@ -74,25 +80,25 @@ function code() {
 function suma() {
     opeA = resultado.value;
     operacion = "+";
-    rei();
+    lim();
 }
 
 function resta() {
     opeA = resultado.value;
     operacion = "-";
-    rei();
+    lim();
 }
 
 function mul() {
     opeA = resultado.value;
     operacion = "*";
-    rei();
+    lim();
 }
 
-function div() {
+function divi() {
     opeA = resultado.value;
     operacion = "/";
-    rei();
+    lim();
 }
 
 function igu() {
@@ -100,13 +106,27 @@ function igu() {
     resolver();
 }
 
-function resolver(){
-    var rei = 0; 
-    switch(operacion){
-        case "+": 
-        resultado = parseFloat(opeA) + parseFloat(opeB)); 
-        break, 
+function resolver() {
+    var res = 0;
+    switch (operacion) {
+        case "+":
+            res = parseFloat(opeA) + parseFloat(opeB);
+            break;
+
+        case "-":
+            res = parseFloat(opeA) - parseFloat(opeB);
+            break;
+
+        case "*":
+            res = parseFloat(opeA) * parseFloat(opeB);
+            break;
+
+        case "/":
+            resultado = parseFloat(opeA) / parseFloat(opeB);
+            break;
     }
+    rei(); 
+    resultado.value = res;
 }
 
 
