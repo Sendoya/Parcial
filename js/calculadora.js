@@ -100,6 +100,14 @@ function igu() {
     resolver();
 }
 
+function resolver(){
+    var rei = 0; 
+    switch(operacion){
+        case "+": 
+        resultado = parseFloat(opeA) + parseFloat(opeB)); 
+        break, 
+    }
+}
 
 
 
