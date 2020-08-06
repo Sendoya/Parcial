@@ -95,5 +95,11 @@ function div() {
     rei();
 }
 
+function igu() {
+    opeB = resultado.value;
+    resolver();
+}
+
+
 
 
